@@ -80,7 +80,7 @@ locals {
     },
   ]
 
-  # ECS task definition
+  # ECS task definition 
   latest_task_definition_rev = var.external_task_definition_updates ? max(aws_ecs_task_definition.atlantis.revision, data.aws_ecs_task_definition.atlantis[0].revision) : aws_ecs_task_definition.atlantis.revision
 
   # Secret access tokens
